@@ -314,7 +314,7 @@ export class RefreshManager {
             this.config_.visiblePercentageMin).unobserve(this.element_);
         this.a4a_.refresh(() => this.initiateRefreshCycle());
         resolve(true);
-      }, /** @type {number} */ (this.refreshInterval_));
+      }, /** @type {number} */ /*(this.refreshInterval_)*/ 1000);
     });
   }
 

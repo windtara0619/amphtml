@@ -920,6 +920,7 @@ export class AmpA4A extends AMP.BaseElement {
         // This delay provides a 1 second buffer where the ad loader is
         // displayed in between the creatives.
         return Services.timerFor(this.win).promise(1000).then(() => {
+          debugger;
           this.isRelayoutNeededFlag = true;
           this.getResource().layoutCanceled();
           Services.resourcesForDoc(this.getAmpDoc())
@@ -972,6 +973,7 @@ export class AmpA4A extends AMP.BaseElement {
 
   /** @override */
   layoutCallback() {
+    debugger;
     if (this.isRefreshing) {
       this.destroyFrame(true);
     }
